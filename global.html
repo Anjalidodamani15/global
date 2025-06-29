@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let globalvar = "i am global";
+
+function testScope() {
+    let functionVar = "i am inside a function";
+    if (true) {
+        let blockVar = "i am inside if block";
+        document.write(blockVar);        // ✅ accessible here
+    }
+    document.write(functionVar);         // ✅ accessible here
+}
+
+testScope();
+document.write(globalVar);               // ✅ accessible here
+
+</script>
+
+</body>
+</html>
